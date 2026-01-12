@@ -1,17 +1,17 @@
 
-const sourceId = 'booktoki';
-const sourceName = 'BookToki';
-const baseUrl = 'https://booktoki469.com/';
+const sourceId = 'nineheavens';
+const sourceName = 'Nine Heavens';
+const baseUrl = 'https://nineheavens.org/';
 
-const BookTokiPlugin = {
+const NineHeavensPlugin = {
   id: sourceId,
   name: sourceName,
-  icon: 'icons/english/booktoki.png',
+  icon: 'icons/english/nineheavens.png',
   site: baseUrl,
   version: '1.0.0',
   
   async popularNovels(pageNo) {
-    const url = `${this.site}novel?page=${pageNo}`;
+    const url = `${this.site}novels?page=${pageNo}`;
     const response = await fetch(url);
     const html = await response.text();
     const novels = [];
@@ -38,11 +38,11 @@ const BookTokiPlugin = {
   },
 
   async searchNovels(searchTerm, pageNo) {
-    const url = `${this.site}novel?search=${searchTerm}&page=${pageNo}`;
+    const url = `${this.site}search?q=${searchTerm}&page=${pageNo}`;
     const response = await fetch(url);
     const html = await response.text();
     return [];
   }
 };
 
-export default BookTokiPlugin;
+export default NineHeavensPlugin;
