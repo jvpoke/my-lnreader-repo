@@ -45,4 +45,4 @@ const BookTokiPlugin = {
   }
 };
 
-export default BookTokiPlugin;
+module.exports = BookTokiPlugin;

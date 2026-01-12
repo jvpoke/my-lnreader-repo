@@ -45,4 +45,4 @@ const NineHeavensPlugin = {
   }
 };
 
-export default NineHeavensPlugin;
+module.exports = NineHeavensPlugin;
